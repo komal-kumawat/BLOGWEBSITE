@@ -10,7 +10,7 @@ const navItems = [
 export default function Navbar() {
   return (
     <nav className="sticky top-0 z-50 bg-[#0f0f0f]/80 backdrop-blur border-b border-white/10">
-      <div className="max-w-7xl mx-auto px-8 py-4 flex items-center justify-between">
+      <div className="max-w-5xl mx-auto px-10 py-4 flex items-center justify-between">
         
         {/* Logo */}
         <Link href="/" className="text-xl font-semibold text-gray-100">

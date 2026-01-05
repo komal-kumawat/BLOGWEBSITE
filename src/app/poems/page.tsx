@@ -1,5 +1,5 @@
 import {  getBlogsByType } from "@/lib/blogs";
-
+import Link from "next/link";
 export default function BooksPage() {
   const blogs = getBlogsByType("poem");
 
@@ -25,9 +25,11 @@ export default function BooksPage() {
               {blog.content}
             </p>
 
-            <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
-              Read more →
-            </button>
+            <Link href={`/poems/${blog.slug}`}>
+              <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                Read more →
+              </button>
+            </Link>
           </div>
         ))}
       </div>

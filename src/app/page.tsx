@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#0f0f0f] text-gray-200">
       <h1 className="text-4xl font-semibold mb-12 text-center text-gray-100 pt-10">
-        My Blog
+        My Blogs
       </h1>
 
       <div className="grid lg:grid-cols-3 sm:grid-cols-2 gap-10 px-8 md:px-16 pb-16">
@@ -27,7 +27,7 @@ export default function Home() {
               {blog.content}
             </p>
 
-            <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+            <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors cursor-pointer">
               Read more →
             </button>
           </div>

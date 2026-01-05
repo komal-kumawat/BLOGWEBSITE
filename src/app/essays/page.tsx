@@ -1,10 +1,10 @@
-import {  getBlogsByType } from "@/lib/blogs";
-
+import { getBlogsByType } from "@/lib/blogs";
+import Link from "next/link";
 export default function BooksPage() {
   const blogs = getBlogsByType("essay");
 
   return (
-     <div className="min-h-screen bg-[#0f0f0f] text-gray-200">
+    <div className="min-h-screen bg-[#0f0f0f] text-gray-200">
       <h1 className="text-4xl font-semibold mb-12 text-center text-gray-100 pt-10">
         My Essays
       </h1>
@@ -24,9 +24,11 @@ export default function BooksPage() {
               {blog.content}
             </p>
 
-            <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
-              Read more →
-            </button>
+            <Link href={`/essays/${blog.slug}`}>
+              <button className="mt-6 text-sm text-emerald-400 hover:text-emerald-300 transition-colors">
+                Read more →
+              </button>
+              </Link> 
           </div>
         ))}
       </div>
